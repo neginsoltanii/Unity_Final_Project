@@ -14,6 +14,10 @@ TagManager:
   - Coin
   - PlayerRay
   - Rocket
+  - 5 Points
+  - 10 Points
+  - FxTemporaire
+  - Background
   layers:
   - Default
   - TransparentFX

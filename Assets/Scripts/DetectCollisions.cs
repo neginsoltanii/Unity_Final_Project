@@ -4,13 +4,6 @@ using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
 {
-    public AudioClip shootingRocksSound;
-    //public ParticleSystem fireRocksParticle;
-
-
-
-
-    //private GameManager gameManagerScript;
 
     // Start is called before the first frame update
     void Start()
@@ -23,13 +16,11 @@ public class DetectCollisions : MonoBehaviour
         
     }
 
+    //Check if the projevtile hits the rock
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            //Instantiate(fireRocksParticle, transform.position, fireRocksParticle.transform.rotation);
-
-            //fireRocksParticle.Play();
             Destroy(other.gameObject);
             Destroy(gameObject);
         }

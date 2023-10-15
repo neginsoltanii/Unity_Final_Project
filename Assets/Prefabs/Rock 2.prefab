@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3168642715942630290}
   - component: {fileID: 3168642715942630291}
-  - component: {fileID: 6553962384826390401}
   - component: {fileID: 965197647}
+  - component: {fileID: 1229008414109217692}
   m_Layer: 0
   m_Name: Rock 2
   m_TagString: Enemy
@@ -74,19 +74,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 4339449561539648803}
   m_Enabled: 1
---- !u!114 &6553962384826390401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3168642715942630288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d0034b963a494258b7ba20dbe51863c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 50
 --- !u!65 &965197647
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -100,6 +87,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.6410866, y: 2.0724745, z: 2.4020135}
   m_Center: {x: 0.00008869171, y: 0.28032875, z: -0.046724916}
+--- !u!114 &1229008414109217692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3168642715942630288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e875960dec040dd9ecbd511cc0bd14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 50
 --- !u!1001 &3168642716499800516
 PrefabInstance:
   m_ObjectHideFlags: 0

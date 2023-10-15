@@ -7,26 +7,24 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    private AudioSource playerAudio;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI highScoreText;
     public TextMeshProUGUI gameOverText;
     public Button restartButton;
     public GameObject titleScreen;
-
     public GameObject player;
-    private AudioSource playerAudio;
     public ParticleSystem explosionParticle;
     public AudioClip crashSound;
 
     private int score;
-    public bool isGameOver;
     private int highScore;
+    public bool isGameOver;
 
     // Start is called before the first frame update
     void Start()
     {
         playerAudio = GetComponent<AudioSource>();
-
         isGameOver = false;
         highScore = PlayerPrefs.GetInt("HighScore", 0); // Load the high score from PlayerPrefs
         score = 0;
@@ -63,7 +61,6 @@ public class GameManager : MonoBehaviour
         gameOverText.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
         isGameOver = true;
-        //player.GetComponent<AudioSource>().PlayOneShot(crashSound, 2.0f);
         playerAudio.PlayOneShot(crashSound, 2.0f);
 
         Destroy(player);
@@ -81,5 +78,4 @@ public class GameManager : MonoBehaviour
         highScoreText.text = "High Score: " + highScore;
         PlayerPrefs.SetInt("HighScore", highScore); // Save the high score to PlayerPrefs
     }
-
 }

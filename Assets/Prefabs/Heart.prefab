@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1894010005942371019}
   - component: {fileID: 4443952604118775297}
   - component: {fileID: 3057243726438501823}
-  - component: {fileID: 3057243726438501822}
+  - component: {fileID: 4470713569161033364}
   m_Layer: 0
   m_Name: Heart
   m_TagString: 5 Points
@@ -98,7 +98,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.977959, y: 0.90573895, z: 0.58480346}
   m_Center: {x: -1.8969652e-29, y: -0.000000029802322, z: -0.000000029802322}
---- !u!114 &3057243726438501822
+--- !u!114 &4470713569161033364
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2786860831189784532}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d0034b963a494258b7ba20dbe51863c, type: 3}
+  m_Script: {fileID: 11500000, guid: c8e875960dec040dd9ecbd511cc0bd14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 40

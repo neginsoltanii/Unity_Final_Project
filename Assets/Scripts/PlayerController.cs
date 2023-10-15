@@ -10,17 +10,17 @@ public class PlayerController : MonoBehaviour
     public AudioClip pointsSound;
     public AudioClip shootingSound;
 
+    [SerializeField] private float speed = 60;
     private float horizontalInput;
-    private float speed = 60;
     private float xRange = 50;
     private bool canShoot = true;
+
 
     // Start is called before the first frame update
     void Start()
     {
         gameManagerScript = GameObject.Find("Game Manager").GetComponent<GameManager>();
         playerAudio = GetComponent<AudioSource>();
-
     }
 
     // Update is called once per frame
@@ -37,18 +37,17 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(xRange, transform.position.y);
         }
 
-        //Get player's input
+        //Get player's input and move it left/right
         horizontalInput = Input.GetAxis("Horizontal");
-
-        //Move spacecraft left/right
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
 
+        //Player can shoot when pressing Space key without spamming it
         if (Input.GetKeyDown(KeyCode.Space) && !gameManagerScript.isGameOver && canShoot)
         {
             StartCoroutine(ShootWithDelay());
             playerAudio.PlayOneShot(shootingSound, 2.0f);
 
-
+            //Player will lose points when they shoot
             if (gameManagerScript.GetScore() >= 5)
             {
                 gameManagerScript.UpdateScore(-5);
@@ -58,12 +57,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.Log("I am here");
         if (other.gameObject.CompareTag("Enemy"))
         {
-
-            gameManagerScript.explosionParticle.Play();
-         
             gameManagerScript.GameOver();
             gameManagerScript.isGameOver = true;
         }
@@ -81,9 +76,9 @@ public class PlayerController : MonoBehaviour
         }
 
         Destroy(other.gameObject);
-
     }
 
+    //Prevent the player from shooting continuously
     IEnumerator ShootWithDelay()
     {
         canShoot = false;
@@ -93,5 +88,4 @@ public class PlayerController : MonoBehaviour
 
         canShoot = true;
     }
-
 }

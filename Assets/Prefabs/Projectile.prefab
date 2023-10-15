@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1797075747860723161}
   - component: {fileID: 2946242381978366409}
   - component: {fileID: 3717990391895229639}
-  - component: {fileID: 4239945402941438539}
+  - component: {fileID: -6185634984522634998}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Projectile
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingRocksSound: {fileID: 8300000, guid: 913d6445ee8cc4152a9c18da590ee203, type: 3}
-  fireRocksParticle: {fileID: 198572881580852744, guid: 7e48ba6b1b968764490bbc70b66e3fe1,
+  fireRocksParticle: {fileID: 4896772843799200986, guid: 8e1918abe26494b37aa4d69d6c5ec723,
     type: 3}
 --- !u!65 &2946242381978366409
 BoxCollider:
@@ -145,7 +145,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
---- !u!114 &4239945402941438539
+--- !u!114 &-6185634984522634998
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9158421729296407660}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d0034b963a494258b7ba20dbe51863c, type: 3}
+  m_Script: {fileID: 11500000, guid: c8e875960dec040dd9ecbd511cc0bd14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
