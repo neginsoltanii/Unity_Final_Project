@@ -60,7 +60,6 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             gameManagerScript.GameOver();
-            gameManagerScript.isGameOver = true;
         }
 
         else if (other.gameObject.CompareTag("5 Points"))
